@@ -2,16 +2,6 @@
 
 let amigos = [];
 let vacio = '';
-function agregarAmigo (){
-    let candidatoAmigo = document.getElementById('amigo').value;
-    if (candidatoAmigo === vacio){
-        alert('Por favor, inserte un nombre.');
-    } else {
-        amigos.push(candidatoAmigo);
-    }
-    campoVacio();
-    console.log(amigos);
-}
 
 function campoVacio (){
     document.getElementById('amigo').value = '';
@@ -22,4 +12,31 @@ function condicionesIniciales (){
 
 }
 
-// console.log(amigos);
+function agregarAmigo (){
+    let candidatoAmigo = document.getElementById('amigo').value;
+    if (candidatoAmigo === vacio){
+        alert('Por favor, inserte un nombre.');
+    } else {
+        amigos.push(candidatoAmigo);
+    }
+    campoVacio();
+    console.log(amigos);
+    arregloAmigos()
+}
+
+function arregloAmigos () {
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+    let ultimoElemnto = amigos.length-1;
+    
+    for (var contador = 0; contador <= ultimoElemnto; contador++) {
+        elementoTexto('listaAmigos', `<li> ${amigos.includes(contador)} </li>`);
+    }
+
+}
+
+function elementoTexto (elemento,texto){
+    let elementoHTML = document.getElementById(elemento);
+    elementoHTML.innerHTML = texto;
+}
+
