@@ -20,7 +20,7 @@ function agregarAmigo (){
         amigos.push(candidatoAmigo);
     }
     campoVacio();
-    console.log(amigos);
+    console.log(amigos); //para gestionar el arreglo
     arregloAmigos()
 }
 
@@ -28,9 +28,12 @@ function arregloAmigos () {
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = '';
     let ultimoElemnto = amigos.length-1;
+    let arreglo = [];
     
     for (var contador = 0; contador <= ultimoElemnto; contador++) {
-        elementoTexto('listaAmigos', `<li> ${amigos.includes(contador)} </li>`);
+        arreglo.push(`<li> ${amigos[contador]} </li>`);
+        console.log(arreglo);
+        elementoTexto('listaAmigos', arreglo );
     }
 
 }
