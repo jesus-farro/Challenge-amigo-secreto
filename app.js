@@ -40,7 +40,7 @@ function sortearAmigo() {
         alert('Por favor, agrega el nombre de los amigos a sortear');
     } else {
         let numeroSorteado = Math.floor(Math.random()*amigos.length);
-        console.log(numeroSorteado);
+        console.log(numeroSorteado); // Para gestionar el número sorteado
         let amigoSorteado = document.getElementById('listaAmigos');
         amigoSorteado.innerHTML = `El amigo secreto sorteado es: ${amigos[numeroSorteado]}`;
     }
