@@ -28,17 +28,12 @@ function arregloAmigos () {
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = '';
     let ultimoElemnto = amigos.length-1;
-    let nombresAmigos = '';
     
     for (var contador = 0; contador <= ultimoElemnto; contador++) {
-        nombresAmigos = `${nombresAmigos} <li> ${amigos[contador]} </li>`;
+        lista.innerHTML = `${lista.innerHTML} <li> ${amigos[contador]} </li>`;
     }
-    console.log(nombresAmigos); // Para gestionar variable de la lista de amigos
-    elementoTexto('listaAmigos', nombresAmigos );
+    console.log(lista.innerHTML); // Para gestionar la lista de amigos
 }
 
-function elementoTexto (elemento,texto){
-    let elementoHTML = document.getElementById(elemento);
-    elementoHTML.innerHTML = texto;
-}
+
 
