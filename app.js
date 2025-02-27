@@ -35,5 +35,15 @@ function arregloAmigos () {
     console.log(lista.innerHTML); // Para gestionar la lista de amigos
 }
 
-
+function sortearAmigo() {
+    if (amigos.length === 0){
+        alert('Por favor, agrega el nombre de los amigos a sortear');
+    } else {
+        let numeroSorteado = Math.floor(Math.random()*amigos.length);
+        console.log(numeroSorteado);
+        let amigoSorteado = document.getElementById('listaAmigos');
+        amigoSorteado.innerHTML = `El amigo secreto sorteado es: ${amigos[numeroSorteado]}`;
+    }
+    
+}
 
