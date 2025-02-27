@@ -28,14 +28,13 @@ function arregloAmigos () {
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = '';
     let ultimoElemnto = amigos.length-1;
-    let arreglo = [];
+    let nombresAmigos = '';
     
     for (var contador = 0; contador <= ultimoElemnto; contador++) {
-        arreglo.push(`<li> ${amigos[contador]} </li>`);
-        console.log(arreglo);
-        elementoTexto('listaAmigos', arreglo );
+        nombresAmigos = `${nombresAmigos} <li> ${amigos[contador]} </li>`;
     }
-
+    console.log(nombresAmigos); // Para gestionar variable de la lista de amigos
+    elementoTexto('listaAmigos', nombresAmigos );
 }
 
 function elementoTexto (elemento,texto){
