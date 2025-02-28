@@ -7,11 +7,6 @@ function campoVacio (){
     document.getElementById('amigo').value = '';
 }
 
-function condicionesIniciales (){
-    campoVacio();
-
-}
-
 function agregarAmigo (){
     let candidatoAmigo = document.getElementById('amigo').value;
     if (candidatoAmigo === vacio){
@@ -43,7 +38,16 @@ function sortearAmigo() {
         console.log(numeroSorteado); // Para gestionar el número sorteado
         let amigoSorteado = document.getElementById('listaAmigos');
         amigoSorteado.innerHTML = `El amigo secreto sorteado es: ${amigos[numeroSorteado]}`;
-    }
-    
+        document.getElementById('click').setAttribute('onclick','reinicio()');
+        document.getElementById('click').innerHTML = 'Reiniciar Juego';
+    }    
 }
 
+function reinicio(){
+    document.getElementById('click').setAttribute('onclick',"sortearAmigo()");
+    document.getElementById('click').innerHTML = '<img src="assets/play_circle_outline.png" alt="Ícono para sortear">Sortear amigo';
+    campoVacio();
+    amigos = [];
+    let vaciarLista = document.getElementById('listaAmigos');
+    vaciarLista.innerHTML = '';
+}
