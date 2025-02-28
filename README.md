@@ -17,7 +17,7 @@
 
 ![Alerta de lista vacía](https://github.com/user-attachments/assets/65423123-8ba6-4107-8249-f7c261b50656)
 
--Ejemplo: De la siguiente manera se estará visualizando como se van agregando a la lista cada uno de los nombre que agregue.
+-Ejemplo: De la siguiente manera se estará visualizando como se van agregando a la lista cada uno de los nombres.
 
 ![Ejemplo de lista de amigos](https://github.com/user-attachments/assets/92434c96-22af-4418-8266-ed1b05548f24)
 
