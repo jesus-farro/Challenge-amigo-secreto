@@ -15,7 +15,7 @@ function agregarAmigo (){
         amigos.push(candidatoAmigo);
     }
     campoVacio();
-    console.log(amigos); //para gestionar el arreglo
+    // console.log(amigos); //para gestionar el arreglo
     arregloAmigos()
 }
 
@@ -25,9 +25,14 @@ function arregloAmigos () {
     let ultimoElemnto = amigos.length-1;
     
     for (var contador = 0; contador <= ultimoElemnto; contador++) {
-        lista.innerHTML = `${lista.innerHTML} <li> ${amigos[contador]} </li>`;
+        lista.innerHTML = `${lista.innerHTML} <li> ${amigos[contador]}  <button class="x" onclick="eliminarAmigo(${contador})"><img src="assets/x.png" alt="Eliminar amigo" width="20px" height="20px"></button></li>`;
     }
-    console.log(lista.innerHTML); // Para gestionar la lista de amigos
+    // console.log(lista.innerHTML); // Para gestionar la lista de amigos
+}
+
+function eliminarAmigo(indice){
+    amigos.splice(indice, 1);
+    arregloAmigos();
 }
 
 function sortearAmigo() {
@@ -35,7 +40,7 @@ function sortearAmigo() {
         alert('Por favor, agrega el nombre de los amigos a sortear');
     } else {
         let numeroSorteado = Math.floor(Math.random()*amigos.length);
-        console.log(numeroSorteado); // Para gestionar el número sorteado
+        // console.log(numeroSorteado); // Para gestionar el número sorteado
         let amigoSorteado = document.getElementById('listaAmigos');
         amigoSorteado.innerHTML = `El amigo secreto sorteado es: ${amigos[numeroSorteado]}`;
         document.getElementById('click').setAttribute('onclick','reinicio()');
